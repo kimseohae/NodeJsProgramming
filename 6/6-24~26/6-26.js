@@ -10,7 +10,7 @@ http.createServer(function(request, response) {
         fs.readFile('6-25.html',function(err,data){
             response.writeHead(200, {"Content-Type" : 'text/html'});
             response.end(data);
-        })
+        });
     } else if(request.method == 'POST') {
         // POST 요청
         request.on('data',function(data){
